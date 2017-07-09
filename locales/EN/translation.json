@@ -72,7 +72,7 @@
 		"my_company": "My company",
 		"win_auction": "Win auction",
 		"shipment": {
-			"not_started": "Not started",
+			"not_started": "Not Started",
 			"history": "History",
 			"actual": "Actual",
 			"no_wait_shipments": "No wait shipments...",

@@ -219,27 +219,47 @@ angular.module('myApp').config(function($stateProvider, $urlRouterProvider, $loc
 				 role: [1,2,3,4]
 			 },
 			 resolve: {
-				 actualShipments: function(Shipments){
-					 return Shipments.getActualShipments().then(function(res){
-						 return res;
-					 }).catch(function(){
-						 return null;
-					 })
-				 },
-				 pastShipments: function(Shipments){
-					 return Shipments.getPastShipments().then(function(res){
-						 return res;
-					 }).catch(function(){
-						 return null;
-					 })
-				 },
 				 notStartedShipments: function(Shipments){
 					 return Shipments.getNotStartedShipments().then(function(res){
 						 return res;
 					 }).catch(function(){
 						 return null;
 					 })
-				 },
+				 }
+			 }
+		 })
+		 .state('actual_shipments', {
+			 url: "/manage/actual_shipments",
+			 controller: 'actualShipmentsController',
+			 templateUrl: "app/components/Manage/ActualShipments/actualShipmentsView.html",
+			 data: {
+				 role: [1,2,3,4]
+			 },
+			 resolve: {
+				 actualShipments: function(Shipments){
+					 return Shipments.getActualShipments().then(function(res){
+						 return res;
+					 }).catch(function(){
+						 return null;
+					 })
+				 }
+			 }
+		 })
+		 .state('history_shipments', {
+			 url: "/manage/history_shipments",
+			 controller: 'historyShipmentsController',
+			 templateUrl: "app/components/Manage/HistoryShipments/historyShipmentsView.html",
+			 data: {
+				 role: [1,2,3,4]
+			 },
+			 resolve: {
+                 pastShipments: function(Shipments){
+                     return Shipments.getPastShipments().then(function(res){
+                         return res;
+                     }).catch(function(){
+                         return null;
+                     })
+                 }
 			 }
 		 })
 		 .state('shipments_manage', {

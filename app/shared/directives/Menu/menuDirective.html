@@ -28,8 +28,14 @@
         <div class="tab" ui-sref="shipments_manage" ng-class="underRoute == 'manage' ? 'active' : null" >
             Manage
         </div>
-        <div class="tab"ui-sref="view_shipments" ng-class="underRoute == 'overview' ? 'active' : null" >
-            Overview
+        <div class="tab" ui-sref="view_shipments" ng-class="underRoute == 'overview' ? 'active' : null" >
+            Not Started
+        </div>
+        <div class="tab" ui-sref="actual_shipments" ng-class="underRoute == 'actual' ? 'active' : null" >
+            Actual
+        </div>
+        <div class="tab" ui-sref="history_shipments" ng-class="underRoute == 'history' ? 'active' : null" >
+            History
         </div>
     </div>
     <div class="menu-vertical col-md-2" ng-if="aboveRoute == 'company'">

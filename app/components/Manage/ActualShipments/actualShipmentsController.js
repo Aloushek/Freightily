@@ -1,17 +1,17 @@
 /**
- * viewShipmentsController
+ * actualShipmentsController
  *
- * @class viewSchipmentsController
+ * @class actualShipmentsController
  * @constructor
  */
 
 angular.module('appControllers')
-    .controller('viewShipmentsController', ['$scope', 'notStartedShipments', '$http', '$q', '$filter', 'UserAbility', function($scope, notStartedShipments, $http, $q, $filter, UserAbility){
-        $scope.setNavigationPath("home|manage|view_shipments");
+    .controller('actualShipmentsController', ['$scope', 'actualShipments', '$http', '$q', '$filter', 'UserAbility', function($scope, actualShipments, $http, $q, $filter, UserAbility){
+        $scope.setNavigationPath("home|manage|actual_shipments");
 
-        $scope.notStartedShipments = notStartedShipments;
+        $scope.actualShipments = actualShipments;
         $scope.photos = [];
-        $scope.route = "shipments|overview";
+        $scope.route = "shipments|actual";
 
         //only for post photos, but never use on web client
         $scope.uploadPhoto = function upload(photos)
